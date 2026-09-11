@@ -51,3 +51,20 @@ excluding the client brief. Flagged an open question on
 analysis/source-tracking.md: whether icsc-grocery-sector-trends.md
 (already on the course's own fallback list) counts as the
 instructor-provided source or the independently-found one.
+
+---
+
+**2026-09-11 — QUERY — "What do our sources say about where specialty grocers are opening?"**
+
+Answered by reading client-brief.md, icsc-grocery-sector-trends.md,
+and workshop-01-sources.md. Saved as a new analysis page per the
+query workflow.
+
+Pages created: analysis/specialty-grocer-openings.md.
+Pages updated: index.md.
+
+Notes: most specific "where" evidence is either Meridian-specific (LA/
+Orange/Ventura, Pasadena candidate) or thin secondhand blurbs from the
+un-ingested fallback list (Bristol Farms in LA, Sprouts' 35 new
+stores). Page includes one clearly labeled own-conclusion paragraph
+not asserted by any source.

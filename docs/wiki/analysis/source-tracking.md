@@ -44,3 +44,4 @@ Full list with URLs: [raw/workshop-01-sources.md](../../../raw/workshop-01-sourc
 
 - [Grocery Industry Trends](../concepts/grocery-industry-trends.md)
 - [Open Questions](open-questions.md)
+- [Specialty Grocer Openings — Where](specialty-grocer-openings.md)

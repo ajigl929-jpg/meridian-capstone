@@ -30,3 +30,4 @@ Meridian-specific site economics.
 - [Data Sources](data-sources.md)
 - [Open Questions](../analysis/open-questions.md)
 - [Grocery Industry Trends](grocery-industry-trends.md)
+- [Specialty Grocer Openings — Where](../analysis/specialty-grocer-openings.md)

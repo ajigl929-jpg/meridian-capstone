@@ -34,7 +34,7 @@
 
 **How to check it:** Open the file and confirm all four sections (Architecture, Page conventions, Workflows, Data handling) are present and each is at least a real paragraph — not a heading with no content under it.
 
-- [ ] **Step 1: Write `docs/wiki/CLAUDE.md`**
+- [x] **Step 1: Write `docs/wiki/CLAUDE.md`**
 
 ```markdown
 # Wiki Schema — Meridian Capstone Research Wiki
@@ -96,7 +96,7 @@ rather than mechanically enforcing it — the person running an ingest
 is responsible for checking first.
 ```
 
-- [ ] **Step 2: Verify**
+- [x] **Step 2: Verify**
 
 Run: `test -f "docs/wiki/CLAUDE.md" && echo OK`
 Expected: `OK`
@@ -118,7 +118,7 @@ Expected: `OK`
 
 **How to check it:** Read each page side by side with `raw/client-brief.md` — every factual claim (revenue, store count, employee count, dates, roles) should trace to a specific line in the brief. No invented details (e.g., no made-up last name for Marcus).
 
-- [ ] **Step 1: Write `docs/wiki/entities/meridian-markets.md`**
+- [x] **Step 1: Write `docs/wiki/entities/meridian-markets.md`**
 
 ```markdown
 # Meridian Markets
@@ -146,7 +146,7 @@ an improvement.
 - [Data Sources](../concepts/data-sources.md)
 ```
 
-- [ ] **Step 2: Write `docs/wiki/entities/dana-okafor.md`**
+- [x] **Step 2: Write `docs/wiki/entities/dana-okafor.md`**
 
 ```markdown
 # Dana Okafor
@@ -169,7 +169,7 @@ cannot answer analytics questions.
 - [Interview Questions](../analysis/interview-questions.md)
 ```
 
-- [ ] **Step 3: Write `docs/wiki/entities/marcus.md`**
+- [x] **Step 3: Write `docs/wiki/entities/marcus.md`**
 
 ```markdown
 # Marcus
@@ -187,7 +187,7 @@ further detail — this page is a stub pending more information.
 - [Data Sources](../concepts/data-sources.md)
 ```
 
-- [ ] **Step 4: Verify**
+- [x] **Step 4: Verify**
 
 Run: `test -f "docs/wiki/entities/meridian-markets.md" && test -f "docs/wiki/entities/dana-okafor.md" && test -f "docs/wiki/entities/marcus.md" && echo OK`
 Expected: `OK`
@@ -210,7 +210,7 @@ Expected: `OK`
 
 **How to check it:** Read each page against the brief. Confirm `loyalty-program.md` contains an explicit restricted-data flag (not just "40,000 members") — grep for "restricted" in that file.
 
-- [ ] **Step 1: Write `docs/wiki/concepts/expansion-strategy.md`**
+- [x] **Step 1: Write `docs/wiki/concepts/expansion-strategy.md`**
 
 ```markdown
 # Expansion Strategy
@@ -239,7 +239,7 @@ or just an internally favored target. See
 - [Open Questions](../analysis/open-questions.md)
 ```
 
-- [ ] **Step 2: Write `docs/wiki/concepts/loyalty-program.md`**
+- [x] **Step 2: Write `docs/wiki/concepts/loyalty-program.md`**
 
 ```markdown
 # Loyalty Program
@@ -267,7 +267,7 @@ brought in, case by case.
 - [Data Sources](data-sources.md)
 ```
 
-- [ ] **Step 3: Write `docs/wiki/concepts/data-sources.md`**
+- [x] **Step 3: Write `docs/wiki/concepts/data-sources.md`**
 
 ```markdown
 # Data Sources
@@ -294,7 +294,7 @@ Full rules: [docs/data-handling-checklist.md](../../data-handling-checklist.md).
 - [Open Questions](../analysis/open-questions.md)
 ```
 
-- [ ] **Step 4: Write `docs/wiki/concepts/engagement-timeline.md`**
+- [x] **Step 4: Write `docs/wiki/concepts/engagement-timeline.md`**
 
 ```markdown
 # Engagement Timeline
@@ -318,7 +318,7 @@ date not stated in the brief.
 - [Dana Okafor](../entities/dana-okafor.md)
 ```
 
-- [ ] **Step 5: Verify**
+- [x] **Step 5: Verify**
 
 Run: `for f in expansion-strategy loyalty-program data-sources engagement-timeline; do test -f "docs/wiki/concepts/$f.md" || echo "MISSING $f"; done; grep -l "Restricted" docs/wiki/concepts/loyalty-program.md`
 Expected: no `MISSING` lines printed, and the grep prints `docs/wiki/concepts/loyalty-program.md`
@@ -339,7 +339,7 @@ Expected: no `MISSING` lines printed, and the grep prints `docs/wiki/concepts/lo
 
 **How to check it:** Read `interview-questions.md` and confirm every question is answerable-by-Dana and specific to something the brief left open (not a generic "tell me about your business" question). Cross-check each open question in `open-questions.md` against the brief to confirm it's genuinely unstated, not something the brief already answers.
 
-- [ ] **Step 1: Write `docs/wiki/analysis/open-questions.md`**
+- [x] **Step 1: Write `docs/wiki/analysis/open-questions.md`**
 
 ```markdown
 # Open Questions
@@ -388,7 +388,7 @@ during the Dana interview.
 - [Data Sources](../concepts/data-sources.md)
 ```
 
-- [ ] **Step 2: Write `docs/wiki/analysis/interview-questions.md`**
+- [x] **Step 2: Write `docs/wiki/analysis/interview-questions.md`**
 
 ```markdown
 # Interview Questions — Dana Okafor
@@ -447,7 +447,7 @@ Each question targets a gap identified in
 - [Dana Okafor](../entities/dana-okafor.md)
 ```
 
-- [ ] **Step 3: Verify**
+- [x] **Step 3: Verify**
 
 Run: `test -f "docs/wiki/analysis/open-questions.md" && test -f "docs/wiki/analysis/interview-questions.md" && echo OK`
 Expected: `OK`
@@ -468,7 +468,7 @@ Expected: `OK`
 
 **How to check it:** Count the linked pages in `index.md` — should be 9. Confirm `log.md` has exactly one dated entry naming `client-brief.md` as the source and listing the pages it touched.
 
-- [ ] **Step 1: Write `docs/wiki/index.md`**
+- [x] **Step 1: Write `docs/wiki/index.md`**
 
 ```markdown
 # Wiki Index
@@ -498,7 +498,7 @@ Catalog of every page in the research wiki. Updated on every ingest.
 See [log.md](log.md) for the full ingest/query/lint history.
 ```
 
-- [ ] **Step 2: Write `docs/wiki/log.md`**
+- [x] **Step 2: Write `docs/wiki/log.md`**
 
 ```markdown
 # Activity Log
@@ -522,7 +522,7 @@ docs/data-handling-checklist.md — captured in
 concepts/loyalty-program.md and concepts/data-sources.md.
 ```
 
-- [ ] **Step 3: Verify**
+- [x] **Step 3: Verify**
 
 Run: `grep -c '\.md)' docs/wiki/index.md`
 Expected: at least `9` (one per content page link; `log.md`'s own link is separate)
@@ -542,7 +542,7 @@ Expected: at least `9` (one per content page link; `log.md`'s own link is separa
 
 **How to check it:** Run the link-check command below. It should print nothing (no output = no broken links). Then manually confirm all 9 content pages appear in `index.md` (already counted in Task 5, re-confirm here after all files exist).
 
-- [ ] **Step 1: Check every relative link resolves**
+- [x] **Step 1: Check every relative link resolves**
 
 Run this from the repo root:
 
@@ -562,11 +562,11 @@ cd - > /dev/null
 
 Expected: no output.
 
-- [ ] **Step 2: Confirm no orphan pages**
+- [x] **Step 2: Confirm no orphan pages**
 
 Run: `for f in entities/meridian-markets entities/dana-okafor entities/marcus concepts/expansion-strategy concepts/loyalty-program concepts/data-sources concepts/engagement-timeline analysis/open-questions analysis/interview-questions; do grep -q "$f.md" docs/wiki/index.md || echo "ORPHAN: $f"; done`
 Expected: no output.
 
-- [ ] **Step 3: Report done**
+- [x] **Step 3: Report done**
 
 If both checks pass with no output, the wiki build is complete. Tell the user: all 12 files created (1 schema + 9 content pages + 2 nav files), all links resolve, no orphans. Remind them the commit step is manual, per their earlier choice.
