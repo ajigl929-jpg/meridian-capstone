@@ -34,3 +34,20 @@ Notes: added sector context (specialty grocers gaining share, format
 innovation, investment activity) that informs the Pasadena expansion
 case and adds two new interview questions on competitive positioning
 and store format.
+
+---
+
+**2026-09-11 — INGEST — raw/workshop-01-sources.md**
+
+Course document (LMU MSBA BSAN 6088, Fall 2026): Workshop 1 assignment
+instructions and fallback source list. Not Meridian data, not
+grocery-sector research itself — process/tracking content.
+
+Pages created: analysis/source-tracking.md.
+Pages updated: index.md.
+
+Notes: assignment requires 3 public sources ingested by 2026-09-20,
+excluding the client brief. Flagged an open question on
+analysis/source-tracking.md: whether icsc-grocery-sector-trends.md
+(already on the course's own fallback list) counts as the
+instructor-provided source or the independently-found one.

@@ -20,6 +20,7 @@ Catalog of every page in the research wiki. Updated on every ingest.
 
 - [Open Questions](analysis/open-questions.md) — gaps and ambiguities in the client brief
 - [Interview Questions](analysis/interview-questions.md) — draft question list for the Dana interview
+- [Source Tracking](analysis/source-tracking.md) — assignment source-minimum tracking and the fallback source list
 
 ## Log
 
