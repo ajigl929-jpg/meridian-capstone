@@ -21,7 +21,7 @@ terms in `raw/client-brief.md`. Read that brief first if you haven't.
 Run through this every time, before pasting, uploading, or pointing an AI
 tool (including Claude Code) at anything:
 
-1. **Is this file/excerpt on the restricted list above?** → Stop. Do not use an AI tool. Work in Excel/SQL/a plain notebook instead.
+1. **Is this file/excerpt on the restricted list above?** → Stop. Do not use an AI tool — including Claude Code writing or running a script against it, even for a purely mechanical, non-interpretive transformation (e.g., stripping a column, deduplicating rows). Do that work in Excel/SQL/a plain notebook instead, by a human, with no AI tool in the loop. See "Resolved decisions" below for why this applies even to scripted steps.
 2. **Does it contain a customer or employee identifier column** (loyalty ID, employee ID, name, etc.)? → Stop, same as above.
 3. **Is it a derived aggregate built from restricted data?** → Get sign-off first (see log below), then proceed.
 4. **None of the above?** → Safe to proceed.
@@ -36,14 +36,26 @@ Log every case-by-case approval here before using the output with an AI tool.
 |---|---|---|---|
 | | | | |
 
+## Resolved decisions
+
+1. **Will Claude Code ever be pointed directly at restricted files, even
+   for mechanical/non-interpretive steps** (e.g., running a deterministic
+   cleaning script)? **Resolved: no, in all cases.** The brief says
+   counsel is firm and the rule is "not negotiable" — that language
+   doesn't leave room for a "the AI only ran a script, it didn't
+   interpret the data" carve-out. In practice a "mechanical" step can
+   still leak restricted values into an AI session anyway (a traceback
+   on error, a sanity-check preview of the output, an identifying column
+   name surfacing in a log line), so there's no version of "just run
+   this script" that's provably safe. Any cleaning, stripping, or
+   transforming of a restricted file happens in a plain terminal,
+   notebook, or Excel, by a human, with no AI tool involved at any point
+   — only the already-verified-clean result is ever handed to an AI
+   tool, including Claude Code.
+
 ## Open questions (unresolved — confirm before Marcus's extract arrives)
 
-1. **Will Claude Code ever be pointed directly at restricted files**, even
-   for mechanical/non-interpretive steps (e.g., running a deterministic
-   cleaning script)? Not yet decided as a team. **Default posture until
-   resolved: no — restricted files stay out of any Claude Code session
-   entirely.**
-2. **Where will extract files be stored** once received (gitignored
+1. **Where will extract files be stored** once received (gitignored
    locally vs. outside the repo entirely)? Not yet decided. Recommend
    adding restricted-data patterns to `.gitignore` regardless of the
    final answer, as a safety net against an accidental commit.
